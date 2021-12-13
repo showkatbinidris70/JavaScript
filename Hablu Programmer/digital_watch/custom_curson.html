@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Our Funky HTML Page</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-3"></div>
+
+            <div class="col  bg-light  col-lg-6 col-md-12 col-sm-12 fs-2" style="margin-top: 20%;">
+                <span id="h" class="bg-danger p-3 rounded-3"></span>
+                <span id="m" class="bg-success p-3 rounded-3"></span>
+                <span id="s" class="bg-primary p-3 rounded-3"></span>
+                <span id="" class="bg-success p-3 rounded-3">PM</span><br>
+
+                <span id="day"></span>
+                <span id="month"></span>
+                <span id="year"></span>
+
+            </div>
+
+
+            <div class="col col-md-3"></div>
+        </div>
+    </div>
+
+    <script>
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const date = new Date();
+        let day = days[date.getDay()];
+        let month = months[date.getMonth()];
+
+
+        function digitalWatch() {
+            document.getElementById("h").innerHTML = date.getHours();
+            document.getElementById("m").innerHTML = (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes());
+            document.getElementById("s").innerHTML = (date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds());
+
+            document.getElementById("day").innerHTML = day + ",";
+            document.getElementById("month").innerHTML = month + " " + date.getDate() + ",";
+            document.getElementById("year").innerHTML = date.getFullYear();
+        }
+
+        digitalWatch();
+        setInterval(function () {
+            digitalWatch();
+        }, 1000);
+    </script>
+
+
+
+
+    <div class="MyWatch">
+        <span class="H"></span>
+        <span class="M"></span><br>
+        <span class="date"></span>
+    </div>
+
+
+    <script>
+
+        function myTime() {
+            var myDate = new Date();
+            var hr, min = (myDate.getMinutes() < 10 ? "0" + myDate.getMinutes() : myDate.getMinutes()),
+                sec = (myDate.getSeconds() < 10 ? "0" + myDate.getSeconds() : myDate.getSeconds()),
+                M = (myDate.getHours() >= 12 ? "PM" : "AM");
+
+            if (myDate.getHours() == 0) {
+                hr = 12;
+            } else if (myDate.getHours() > 12) {
+                hr = myDate.getHours() - 1;
+            } else {
+                hr = myDate.getHours();
+            }
+            var currentTime = hr + ":" + min + ":" + sec;
+            document.getElementsByClassName("H")[0].innerHTML = currentTime;
+            document.getElementsByClassName("M")[0].innerHTML = M;
+
+            var myDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                myMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                day = myDate.getDate();
+
+            var currentDate = myDay[myDate.getDay()] + "," + myMonth[myDate.getDay()] + "," + day;
+            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+        }
+        myTime();
+
+        setInterval(function () {
+            myTime();
+        }, 1000);
+    </script>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
