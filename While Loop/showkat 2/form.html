@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+	<style type="text/css">
+		label{
+			color:red;
+			padding:3px 10px;	
+			}
+	</style>
+</head>
+
+<body>
+	<h1>Form Validation</h1>
+	<form name="myForm">
+    	Name:<input type="text" name="fname" /><label id="fnamex"></label><br/>
+        ID:<input type="number" name="id" /><label id="id"></label><br/>
+        Education:<input type="checkbox" name="ssc" value="ssc" />SSC
+        	<input type="checkbox" name="hsc" value="hsc" />HSC<label id="education"></label><br/>
+        Gender:<input type="radio" name="gender" value="male" />Male
+        	<input type="radio" name="gender" value="female" />Female<label id="gender"></label><br/>
+        Round:<select name="round">
+        	<option value="Select A Round" selected="selected">Select a round</option>
+            <option value="round 36">round 36</option>
+            <option value="round 37">round 37</option>
+            <option value="round 38">round 38</option>
+        </select>
+        <label id="round"></label><br/>
+        Password:<input type="password" name="pass" /><label id="pass"></label><br/>
+        Email:<input type="email" name="email" /><label id="email"></label><br/>
+        <input type="reset" value="reset" />
+    </form>
+    	<button onclick="validateForm()">send</button>
+       <button onclick="closeWindow()">Close</button>
+       		<script>
+				var win;
+				function closeWindow(){
+					win.close();
+					
+					}		
+				function validateForm(){
+					////field name
+							
+					var fname=document.forms.myForm.fname.value;
+					var id=document.forms.myForm.id.value;
+					var education="";
+						if(document.forms.myForm.ssc.checked){
+							education+=document.forms.myForm.ssc.value;
+							}
+						if(document.forms.myForm.hsc.checked){
+							education+=document.forms.myForm.hsc.value;
+							}
+					
+					document.forms.myForm.fname.value;
+					var gender=document.forms.myForm.gender.value;
+					var round=document.forms.myForm.round.value;
+					var pass=document.forms.myForm.pass.value;
+					var email=document.forms.myForm.email.value;
+					
+					
+					////validate field
+								//name field
+					
+					if(fname==""){
+						document.getElementById('fnamex').innerHTML="Must be fill out";
+						return false;
+						}else if(fname.length<3){
+							document.getElementById('fnamex').innerHTML="Enter at least 3 characters";
+							return fasle;
+							
+							}else{
+								document.getElementById('fnamex').innerHTML="";
+								}
+								//id field
+								
+					if(id==""){
+						document.getElementById('id').innerHTML="Must be fill out";
+						return false;
+						}else if(id.length<5){
+							document.getElementById('id').innerHTML="Enter at least 3 characters";
+							return fasle;
+							
+							}else{
+								document.getElementById('id').innerHTML="";
+								}
+								//education
+					if(!document.forms.myForm.ssc.checked && !document.forms.myForm.hsc.checked){
+						document.getElementById('education').innerHTML="Tell me your education";
+						return false;
+						
+						}else{
+							document.getElementById('education').innerHTML="";
+							}
+							
+							//gender
+					if(gender==""){
+						document.getElementById('gender').innerHTML="Tell me your gender";
+						return false;
+						
+						}else{
+							document.getElementById('gender').innerHTML="";
+							}
+							//gender
+					if(round=="Select A Round"){
+						document.getElementById('round').innerHTML="Tell me your gender";
+						return false;
+						
+						}else{
+							document.getElementById('round').innerHTML="";
+							}
+							
+					///password
+					if(pass==""){
+						document.getElementById('pass').innerHTML="Give your id number";
+						return false;
+						}else if(pass.length<5){
+							document.getElementById('pass').innerHTML="Enter at least 5 characters";
+							return fasle;
+							
+							}else{
+								document.getElementById('pass').innerHTML="";
+								}
+								
+						
+			/*if(email==""){
+						document.getElementById('email').innerHTML="Enter your email ID";
+						return false;
+						}else{
+						var atpos=email.indexOf("@");
+						var dotpos=email.lastIndexOf(".");
+			
+				       if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length){
+					     document.getElementById('email').innerHTML="Enter your email ID";
+						return false;
+						  }else{
+							document.getElementById('email').innerHTML="";
+							}
+						}
+						*/
+						//output
+					
+					if(email==""){
+						document.getElementById('email').innerHTML="Give your email address";
+						return false;
+						}else{
+							var atpos=email.indexOf("@");
+							var dotpos=email.lastIndexOf(".");
+							if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length){
+								document.getElementById('email').innerHTML="give email";
+								return false;
+								
+								}else{
+									document.getElementById('email').innerHTML="";
+									}
+							}
+							
+					/////output
+					
+					
+					
+					win=window.open("","","width=400");
+					win.document.write("<h2><center>Form Output</center></h2>");
+					win.document.write("Name:"+fname+"<br/>");
+					win.document.write("ID:"+id+"<br/>");
+					win.document.write("Education:"+education+"<br/>");
+					win.document.write("Gender:"+gender+"<br/>");
+					win.document.write("Round:"+round+"<br/>");
+					win.document.write("Password:"+pass+"<br/>");
+					win.document.write("Email:"+email+"<br/>");
+					}
+						
+						
+						
+						
+			</script>
+</body>
+</html>

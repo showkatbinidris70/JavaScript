@@ -2,18 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Date </title>
 </head>
 
 <body>
-    <script>
-        const date = new Date();
-        console.log(date.getHours());
+	<div>
+		<h2 id="demo"></h2>
+		<h2 id="demo1"></h2>
+		<h2 id="demo2"></h2>
+		<h2 id="demo3"></h2>
+		<h2 id="demo4"></h2>
+		<h2 id="demo5"></h2>
+	</div>
+	<script>
 
-    </script>
+
+		const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		const date = new Date();
+
+		function addZero(i) {
+			if (i < 10) {
+				i = '0' + i;
+			}
+			return i;
+		}
+		const h = addZero(date.getHours() % 12);
+		const m = addZero(date.getMinutes());
+		const s = addZero(date.getSeconds());
+
+		document.getElementById("demo").innerHTML = 'Get Date = ' + date.getDate();
+		document.getElementById("demo1").innerHTML = 'Get Time = ' + date.getTime();
+		document.getElementById("demo2").innerHTML = 'Get Day = ' + day[date.getDay([])];
+		document.getElementById("demo3").innerHTML = 'Get Full Year = ' + date.getFullYear();
+		document.getElementById("demo4").innerHTML = 'Get Full Year = ' + date.getHours();
+		document.getElementById("demo4").innerHTML = 'Watch = ' + h + ':' + m + ':' + s;
+
+	</script>
 </body>
 
 </html>

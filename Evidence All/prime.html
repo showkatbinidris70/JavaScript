@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+		<script>
+		///print prime
+	
+		function isPrime(num){
+		for(var i=2; i<num; i++)
+			if(num%i===0)return false;
+			return num!==0 && num!==1;
+			
+		}
+		alert(isPrime(5));
+		//var sn =parseInt(prompt("entered number"));
+		//var en =parseInt(prompt("entered number"));
+		function printPrime(sn,en){
+			for(sn; sn<en; sn++){
+				if(isPrime(sn))
+				document.write(sn+"<br/>");
+				}
+			}
+			
+		printPrime(sn,en);	
+		</script>
+</body>
+</html>

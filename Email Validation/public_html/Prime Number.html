@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+              ////check the prime numberalert(isPrime(5));
+            function isPrime(num){
+                for(var i=2; i <num; i++)
+                    if(num % i === 0)return false;
+                return num !== 1 && num !== 0;
+            }
+            alert(isPrime(5));
+          
+              ///check the prime number which are prime number from 1 to 100
+            function printPrime(sn,en){
+                for(sn; sn<en; sn++){
+                    if(isPrime(sn)){
+                        document.write(sn+"<hr/>");
+                    }
+                }
+            }
+             printPrime(1,100);  
+             /// sum the value of prome number
+             
+             function printSumFromPrimes(sn,en){
+                 var sum=0;
+                 for(sn; sn<en; sn++){
+                     if(isPrime(sn)){
+                         sum+=sn;
+                     }
+                 }
+                return sum;
+             }
+             document.write("Sum from Prime Number from 1 to 100:"+printSumFromPrimes(1,100));
+            
+            /// Count the prime number 1 to 100
+            
+            function printCountFromPrimes(sn,en){
+                var count=0;
+                for(sn;sn<en; sn++){
+                    if(isPrime(sn)){
+                        count++;
+                    }
+                }
+                return count;
+            }
+            document.write("Count from Prime Number from 1 to100:"+printCountFromPrimes(1,100));
+            
+        </script>
+            
+    </body>
+</html>

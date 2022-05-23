@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Problem Sloving Nested For Loop</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        // document.write('Namata<br>');
+        var num = 2;
+        // for (let i = 10; i >= 1; i--) {
+        //     // document.write(num + ' x ' + i + ' = ' + num * i + '<br>');
+        //     document.write(i + '<br>');
+        // }
+        document.write('For loop<br>');
+        // let cars = ["BMW", "Volvo", "Saab", "Ford"];
+        // let text = '';
+        // for (let i = 0, len = cars.length; i < len; i++) {
+        //     // document.write(i + '<br>');
+        //     text += cars[i] + '<br>';
+        //     document.getElementById('demo').innerHTML = text + '<br>';
+        // }
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let i = 1;
+        let len = cars.length;
+        let text = '';
+        for (; i < len;) {
+            text += cars[i];
+            document.getElementById('demo').innerHTML = text + '<br>';
+            i++;
+        }
+    </script>
+</body>
+
+</html>

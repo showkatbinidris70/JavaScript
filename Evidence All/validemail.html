@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	label{
+		color:red;
+		padding:3px 10pxl;
+		}
+</style>
+</head>
+
+<body>
+  	<h2>Form Validation</h2>	
+    <form name="myForm">
+    	Name:<input type="text" name="fname" />
+        <label id="fnamex"></label><br/>
+        Gender:<input type="radio" name="gender" value="male" />Male
+        <input type="radio" name="gender" value="female" />Female
+        <label id="gender"></label><br/>
+        Education:<input type="checkbox" name="ssc" value="ssc" />SSC
+        <input type="checkbox" name="hsc" value="hsc" />HSC
+        <label id="education"></label><br/>
+        Email:<input type="email" name="email" />
+        <label id="email"></label><br/>
+        Password:<input type="password" name="password" />
+        <label id="password"></label><br/><br/>
+        Round:<select name="round">
+        <option value="Select A Round" selected="selected">Select A Round</option>
+        <option value="Round 36">Round-36</option>
+        <option value="Round 37">Round-37</option>
+        <option value="Round 38">Round-38</option>
+        </select>
+        <label id="round"></label><br/>
+        <textarea rows="7" cols="20" name="msg" placeholder="Enter at least 10 characters"></textarea>
+        <label id="msg"></label><br/>
+        <input type="reset" value="reset"/>
+    
+    </form>
+    	<button onclick="validateForm()">Submit</button>
+        <button onclick="closeWindow()">Close Window</button>
+        
+        <script>
+				var win;
+				function closeWindow(){
+					win.close();
+					}
+				function validateForm(){
+						//field name
+					var fname=document.forms["myForm"]["fname"].value;
+					var gender=document.forms["myForm"]["gender"].value;
+					var education="";
+						if(document.forms["myForm"].ssc.checked){
+							education+=document.forms["myForm"]["ssc"].value;
+							}
+						if(document.forms["myForm"].hsc.checked){
+							education+=","+document.forms["myForm"]["hsc"].value;
+							}
+					var email=document.forms["myForm"]["email"].value;
+					var password=document.forms["myForm"]["password"].value;
+					var round=document.forms["myForm"]["round"].value;
+					var msg=document.forms["myForm"]["msg"].value;
+					
+					
+					// validate field
+					
+					if(fname==""){
+						document.getElementById('fnamex').innerHTML="Name must be fill out";
+						return false;
+						}else if(fname.length<3){
+							document.getElementById('fnamex').innerHTML="Enter at least 3 characters";
+							return false;
+							}else{
+								document.getElementById('fnamex').innerHTML="";
+								}
+					if(gender==""){
+						document.getElementById('gender').innerHTML="Tell me your gender";
+						return false;
+						}else{
+							document.getElementById('gender').innerHTML="";
+							}
+					if(!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked){
+						document.getElementById('education').innerHTML="Tell me your education";
+						return false;
+						}else{
+							document.getElementById('education').innerHTML="";
+							}
+							
+							///email
+							
+					if(email==""){
+						document.getElementById('email').innerHTML="Enter your email ID";
+						return false;
+						}else{
+							var atpos=email.indexOf("@");
+							var dotpos=email.lastIndexOf(".");
+			
+				if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+				   {
+					
+					document.getElementById('email').innerHTML="Enter your email ID";
+						return false;
+					
+					}
+						else{
+							document.getElementById('email').innerHTML="";
+							}
+							}
+							
+						
+					if(password.length<6){
+						document.getElementById('password').innerHTML="Enter at least 6 characters";
+						return false;
+						}else{
+							document.getElementById('password').innerHTML="";
+							}
+					if(round=="Select A Round"){
+						document.getElementById('round').innerHTML="Select A Round";
+						return false;
+						}else{
+							document.getElementById('round').innerHTML="";
+							}
+					if(msg.length<10){
+						document.getElementById('msg').innerHTML="Enter at least 10 characters";
+						return false;
+						}else{
+							document.getElementById('msg').innerHTML="";
+							}
+					
+					win=window.open("","","width=400");
+					win.document.write("<h2><center>Form Output</center></h2>");
+					win.document.write("Name:"+fname+"<br/>");
+					win.document.write("Gender:"+gender+"<br/>");
+					win.document.write("Education:"+education+"<br/>");
+					win.document.write("Password:"+password+"<br/>");
+					win.document.write("Round:"+round+"<br/>");
+					win.document.write("Comments:"+msg+"<br/>");
+					win.document.write("Email:"+email+"<br/>");
+					
+							
+						}
+						
+		</script>
+        
+</body>
+</html>

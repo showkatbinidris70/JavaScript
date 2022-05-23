@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+	<style type="text/css">
+		label{
+			color:red;
+			padding:3px 10px;
+			}
+	</style>
+</head>
+
+<body>
+	<h1>Validate Form</h1>
+    <form name="myForm">
+    	Name:<input type="text" name="fname"  /><label id="fnamex"></label><br/>
+        Email:<input type="email" name="email" /><label id="email"></label><br/>
+        Password:<input type="password" name="pass1" /><label id="pass1"></label><br/>
+        Confirm Password:<input type="password" name="pass2"/><label id="pass2"></label><br/>
+        <input type="reset" value="reset" />
+    </form>
+    	<button onclick="validateForm()">send</button>
+       
+        
+        <script>
+			var win;
+			function validateForm(){
+				var fname=document.myForm.fname.value;
+				
+				
+				
+				
+				
+				win=window.open("","","width=400");
+				win.document.write("<h2><center>Form Out</center></h2>")
+				}
+		</script>
+
+</body>
+</html>

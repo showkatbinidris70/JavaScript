@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects </title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <button onclick="style.color='red'">This Scope</button>
+    <script>
+
+        const person = {
+            // fname: "Showkat",
+            // lname: " Ali",
+            // age: 30,
+            fullName: function (age) {
+                return this.fname + ' ' + this.lname;
+            }
+        };
+        const member = {
+            fname: "Showkat",
+            lname: " Ali",
+            //  age: 30,
+        }
+        const member1 = {
+            age: 30,
+        }
+        let fullName = person.fullName.bind(member);
+        document.getElementById('demo').innerHTML = fullName()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Open</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <button type="button" onclick="openWindow()">Open Window</button>
+    <button type="button" onclick="closeWindow()">Close Window</button>
+    <button type="button" onclick="encode()">Encode</button>
+    <script>
+        let myWindow;
+        function openWindow() {
+            myWindow = window.open('https://www.w3schools.com/', 'W3schools', 'width=300, height=300');
+        }
+        function closeWindow() {
+            //myWindow.close();
+            alert("Hi Showkat...");
+        }
+
+        let name = "Showkat Ali";
+        let encode = window.btoa(name);
+        let decode = window.atob(encode);
+        document.getElementById("demo").innerHTML = "Encoded: " + encode + decode;
+        // document.getElementById("demo").innerHTML = "Hello World";
+       // window.open("https://docs.google.com/spreadsheets/d/1zhFO36tK8iSpVdSZIUMxwCSXFLV6tNWd7jmZ7ZIKE5k/edit#gid=0");
+    </script>
+</body>
+
+</html>

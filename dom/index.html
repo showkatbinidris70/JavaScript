@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <button onclick="myFunction()">Append</button>
+    <br>
+    <hr>
+    <div id="demo">0</div>
+    <button onclick="increment()">increment + </button>
+    <hr>
+    <p id="display">0</p>
+    <button id="clickButton">increment +</button>
+    <script>
+        function myFunction() {
+            const node = document.createElement('li');
+            const textNode = document.createTextNode('Water');
+            node.appendChild(textNode);
+            document.getElementById('myList').appendChild(node);
+        }
+
+        let num = 0;
+        function increment() {
+            num += 1;
+            document.getElementById('demo').innerHTML = num;
+        }
+
+        let number = 0;
+        const button = document.querySelector('#clickButton');
+        const display = document.querySelector('#display');
+        button.addEventListener('click', () => {
+            number++;
+            display.textContent = number;
+        });
+    </script>
+</body>
+
+</html>

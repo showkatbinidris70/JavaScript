@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <button onclick="stopInterval()">stop</button>
+    <script>
+        const timeInterval = setInterval(setInter, 1000);
+        function setInter() {
+            const date = new Date();
+            document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+        }
+        function stopInterval() {
+            clearInterval(timeInterval);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String </title>
+</head>
+<!--  -->
+
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+
+    <script>
+        let name = 'Showkat';
+        let txt = 'Rebum invidunt et sit ut sed est, vero consetetur sit eos.';
+        const nameArray = name.split('');
+        let text = '';
+        for (let i = 0; i < nameArray.length; i++) {
+            text += nameArray[i] + '<br>';
+        }
+        // document.getElementById('demo1').innerHTML = text;
+
+        let indexOf = txt.startsWith('Rebum');
+        document.getElementById('demo1').innerHTML = indexOf;
+
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+        let html = `<h2>${header}</h2><ul>`;
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+        html += `</ul>`;
+        document.getElementById('demo1').innerHTML = html;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+	<style type="text/css">
+		label{
+			color:red;
+			padding:3px 10px;
+			}
+	</style>
+</head>
+
+<body>
+	<h2>Form Validation</h2>
+    <form name="myForm">
+    Name:<input type="text" name="fname" />
+    <label id="fnamex"></label><br/>
+    Education:<input type="checkbox" name="ssc" value="ssc" />SSC
+    <input type="checkbox" name="hsc" value="hsc" />HSC
+    <label id="Education"></label><br/>
+    Round:<select name="round">
+    <option value="Select A Round" selected="selected">Select a round</option>
+    <option value="Round 36">Round 36</option>
+    <option value="Round 37">Round 37</option>
+    <option value="Round 38">Round 38</option>
+    </select>
+     <label id="Round"></label><br/>
+    Email:<input type="email" name="email" />
+    <label id="email"></label><br/>
+     
+    </form>
+    <button onclick="validateForm()">send</button>
+    
+    <script>
+		var win;
+		function validateForm(){
+			///field name
+			var fname=document.forms.myForm.fname.value;
+			var education="";
+				if(document.forms.myForm.ssc.checked){
+					education+=document.forms.myForm.ssc.value;
+					}
+				if(document.forms.myForm.hsc.checked){
+					education+=","+document.forms.myForm.hsc.value;
+					}
+			document.forms.myForm.fname.value;
+			var round=document.forms.myForm.round.value;
+		var email=document.forms.myForm.email.value;
+			
+			// validation
+			if(fname==""){
+				document.getElementById('fnamex').innerHTML="Name field must be filout";
+				return false;
+				}else if(fname.length<3){
+					document.getElementById('fnamex').innerHTML="Enter at least 3 characters";
+					return false;
+					}else{
+						document.getElementById('fnamex').innerHTML="";
+						}
+			if(!document.forms.myForm.ssc.checked && !document.forms.myForm.hsc.checked){
+				document.getElementById('Education').innerHTML="Tell me your education";
+				return false;
+				}else{
+					document.getElementById('Education').innerHTML="";
+					}
+			if(round=="Select A Round"){
+				document.getElementById('Round').innerHTML="Tell me your round";
+				return false;
+				}else{
+					document.getElementById('Round').innerHTML="";
+					}
+			
+			if(email==""){
+				document.getElementById('email').innerHTML="Enter your email ID";
+				return false;
+				}else{
+					var atpos=email.indexOf("@");
+					var dotpos=email.lastIndexOf(".");
+					if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length){
+						document.getElementById('email').innerHTML="Ente your email ID";
+						return false;
+						}else{
+								document.getElementById('email').innerHTML="";
+							
+							}
+					
+					}
+			
+		/*	if(email==""){
+						document.getElementById('email').innerHTML="Enter your email ID";
+						return false;
+						}else{
+						var atpos=email.indexOf("@");
+						var dotpos=email.lastIndexOf(".");
+			
+				       if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length){
+					     document.getElementById('email').innerHTML="Enter your email ID";
+						return false;
+						  }else{
+							document.getElementById('email').innerHTML="";
+							}
+						}*/
+						//output
+			
+			win=window.open("","","width=400");
+			win.document.write("<h2><center>Form Output</center></h2>")
+			win.document.write("Name:"+fname+"<br/>");
+			win.document.write("Education:"+education+"<br/>");
+			win.document.write("Round:"+round+"<br/>");
+			win.document.write("Email:"+email+"<br/>");
+			}
+	
+	</script>
+    
+    
+    
+</body>
+</html>
