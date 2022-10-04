@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This key word</title>
+</head>
+
+<body>
+    <script>
+        // console.log(this);
+        function unName() {
+            this.name = "Showkat";
+        }
+        unName();
+
+
+        function helloThis() {
+            'use strict';
+            console.log(this);
+        }
+        helloThis();
+
+        const profile = {
+            firstName: "Showkat",
+            lastName: "Ali",
+            fullName() {
+                console.log(this);
+                return this.firstName + " " + this.lastName;
+
+            }
+        }
+        console.log(profile.fullName());
+
+        const profile2 = {
+            firstName: "Showkat",
+            lastName: "Ali",
+            fullName: {
+                firstName: "Mohammad",
+                lastName: "Ali",
+                msg() {
+                    console.log(this.firstName);
+                    console.log(this);
+                }
+            }
+        }
+        profile2.fullName.msg.call(profile2);
+    </script>
+</body>
+
+</html>

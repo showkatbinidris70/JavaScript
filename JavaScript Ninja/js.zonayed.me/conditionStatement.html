@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition Statement</title>
+</head>
+
+<body>
+    <script>
+
+        //--------------
+        if (3 < 5) {
+            console.log("Yeah, I will be executed !");
+        }
+        var name = "Showkat";
+        if (name === "Showkat") {
+            console.log("You are allowted"); // printed
+        }
+        if (name === "Showka") {
+            console.log("You are allowted"); //Conditon is not true, so It will no give output.
+        }
+
+        //----------------------
+        var age = 16;
+        if (age >= 15) {
+            console.log("Your are younger");
+        }
+        if (age <= 30) {
+            console.log("Your are Adult");
+        }
+        if (age <= 60) {
+            console.log("Your are Older");
+        }
+
+        //------------------------
+        var myAge = 30;
+        if (myAge > 20) {
+            console.log("Now you are Adult");
+        } else {
+            console.log("No you are not aged enough to be a adult !");
+        }
+
+        //-------------------------
+        var whatDay = "Friday";
+        if (whatDay === "Friday") {
+            console.log("This is off day");
+        } else if (whatDay == "Sunday") {
+            console.log("It is partially closed");
+        } else {
+            console.log("It is open day");
+        }
+
+        //--------------------------
+        var num = 10;
+        if (num > 2) {
+            //  console.log("It is gratter then 1");
+            if (num > 8) {
+                console.log("It is gratter then 8");
+            } else if (num < 20) {
+                console.log("It is less than 20");
+            } else {
+                console.log("It is not a number");
+            }
+        }
+
+
+        // switch statement
+        var dayName = "Friday";
+        switch (dayName) {
+            case "Sunday":
+                console.log("Today is Sunday");
+                break;
+            case "Friday":
+                console.log("Today is Friday");
+                break;
+            default:
+                console.log("No date name");
+        }
+
+    </script>
+</body>
+
+</html>

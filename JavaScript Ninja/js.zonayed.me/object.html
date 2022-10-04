@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object </title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            Bangladesh: "Dhaka",
+            India: "Delhi",
+            Nepal: "Kathmandu",
+            Afganistan: "Kabul",
+            Thailand: "Bangkok"
+        }
+
+        //let country = obj;
+
+        Object.keys(obj).map(country => console.log(`country is ${country}`));
+        Object.values(obj).map(capital => console.log(`capital is ${capital}`));
+
+        const capitalss = Object.keys(obj);
+        capitalss.map(function (country) {
+            console.log(country);
+        });
+
+        const capitals = Object.values(obj);
+        capitals.map(function (capital) {
+            console.log(capital);
+        });
+
+
+
+        //for of key value
+        for (let [key, value] of Object.entries(obj)) {
+            console.log(key, value);
+        }
+
+        //for in key
+        const objArray1 = Object.keys(obj);
+        for (xx in objArray1) {
+            console.log(xx + " : " + objArray1[xx]);
+        }
+
+        // for in value
+        const objArray = Object.values(obj);
+        for (xx in objArray) {
+            console.log(xx + " : " + objArray[xx]);
+        }
+        // objArray.forEach(objFun);
+        // function objFun(key, value) {
+        //     console.log(objArray);
+        // }
+
+        // for in loop
+        console.log("for in loop start");
+        for (x in obj) {
+            console.log(x + "\'s capital name is : " + obj[x]);
+        }
+
+        // //  console.log(country);
+        // for (let x = 0; x < country; x++) {
+        //     country += x;
+        //     console.log(country);
+        // }
+
+
+        //for of
+        // console.log("for of loop start");
+        // for (country of obj) {
+        //     console.log(country);
+        // }
+
+
+        //for in
+        console.log('For in loop start');
+        for (country in obj) {
+            console.log(country);
+        }
+
+
+        // for of in array
+        console.log('For in an array loop start');
+        const cars = ["BMW", "Volvo", "Mini"];
+        for (car in cars) {
+            console.log(cars[car]);
+        }
+
+
+    </script>
+</body>
+
+</html>

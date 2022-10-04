@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6</title>
+</head>
+
+<body>
+    <script>
+        //video No 1
+        function printProfile() {
+            console.log("Hello, I am Showkat");
+            console.log("I am 30");
+            console.log("I am a software developer");
+        }
+        printProfile();
+        printProfile();
+        printProfile();
+        printProfile();
+
+        //video No 2
+        function multiple() {
+            console.log(10 * 5);
+        }
+        multiple();
+
+        //video No 3
+        function square(num) {
+            console.log(num * num);
+        }
+        square(3);
+
+        function area(length, width) {
+            console.log(length * width);
+        }
+        area(10 * 5);
+
+        function greet(person1, person2, person3) {
+            console.log("Hi " + person1);
+            console.log("Hi " + person2);
+            console.log("Hi " + person3);
+        }
+        greet("Showkat", "Mohammad", "Ibrahim");
+
+
+        //video No 4
+        function multiple(num) {
+            console.log(num, num, num);
+        }
+        multiple(2, 2, 2);
+        multiple(2, 3);
+
+        //video No 5
+
+        // function returnData() {
+        //     const person = {
+        //         name: "Showkat",
+        //         age: 30,
+        //         address: "Dhaka"
+        //     }
+        //     return person;
+        // }
+        // console.log(returnData());
+
+        function returnPerson(firstName, lastName, age) {
+            const str = `This is ${firstName} ${lastName}. I am ${age} years old.`;
+            return str;
+        }
+        console.log(returnPerson("Showkat", "Ali", 30));
+
+        //video No 6
+        function returnPersons(firstName, lastName, age) {
+            return `This is ${firstName} ${lastName}. I am ${age} years old.`;
+        }
+        console.log(returnPersons("Showkat", "Ali", 30));
+        //video No 7
+
+        const profile = {
+            name: "Showkat",
+            age: 30,
+            fullName() {
+                return this.name + " & " + this.age;
+            }
+        }
+        console.log(profile.fullName());
+    </script>
+</body>
+
+</html>

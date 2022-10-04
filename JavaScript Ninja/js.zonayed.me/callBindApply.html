@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Bind Apply</title>
+</head>
+
+<body>
+    <script>
+        //Call Method
+        var myCustomObj = {
+            name: 'Showkat Ali',
+            age: 21,
+            job: 'Student',
+            anotherObj: {
+                name: 'Mohammad Ali',
+                value: function () {
+                    console.log('My name is ' + this.name);
+                }
+            }
+        }
+        myCustomObj.anotherObj.value.call(myCustomObj);
+
+
+        var karim = {
+            name: 'Karim Rahman',
+            dob: 1996,
+            age: function (currentYear) {
+                console.log(this.name + ' is ' + (currentYear - this.dob) + ' years old!');
+            }
+        }
+
+        var rahim = {
+            name: 'Rahim Abdu',
+            dob: 1986
+        }
+
+        karim.age(2018)
+
+        karim.age.call(rahim, 2018);
+
+        //apply method
+
+    </script>
+    <script>
+        var myCustomObj = {
+            name: 'Zonayed Ahmed',
+            age: 21,
+            job: 'Student',
+            anotherObj: {
+                name: 'Ahmed Zonayed',
+                value: function () {
+                    console.log('My name is ' + this.name);
+                }
+            }
+        }
+
+        myCustomObj.anotherObj.value.apply(myCustomObj);
+
+        var karim = {
+            name: 'Karim Rahman',
+            dob: 1996,
+            age: function (currentYear, msg) {
+                console.log(msg + ' ' + this.name + ' is ' + (currentYear - this.dob) + ' years old!');
+            }
+        }
+
+        var rahim = {
+            name: 'Rahim Abdu',
+            dob: 1986
+        }
+
+        karim.age(2018, 'Hello World!');
+
+        karim.age.apply(rahim, [2018, 'Hello World!']);
+    </script>
+    <script>
+        var myCustomObj = {
+            name: 'Zonayed Ahmed',
+            age: 21,
+            job: 'Student',
+            anotherObj: {
+                name: 'Ahmed Zonayed',
+                value: function () {
+                    console.log('My name is ' + this.name);
+                }
+            }
+        }
+
+        myCustomObj.anotherObj.value.bind(myCustomObj);
+        var anotherFunc = myCustomObj.anotherObj.value.bind(myCustomObj);
+        anotherFunc();
+    </script>
+</body>
+
+</html>

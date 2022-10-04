@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Tutorial</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        const product = [
+            {
+                productName: 'Mobile',
+                productColor: 'Off White',
+                productBrand: 'Samsung'
+            },
+            {
+                productName: 'Laptop',
+                productColor: 'White',
+                productBrand: 'HP'
+            },
+        ]
+        const [cell_phone, computer] = product;
+        console.log(`Product name is  ${cell_phone.productName} and Computer name is ${computer.productName}`);
+
+        // function stringLiterel(firstParam, ...restParam) {
+        //     console.log(firstParam);
+        //     console.log(restParam);
+        // }
+
+        // let capital = "Dhaka is the capital of Bangladesh";
+        // let country = "Bangladesh is a beautyfull country";
+        // stringLiterel(`${capital} and  ${country}`);
+
+
+        // const person = {
+        //     firstName: 'Showkat',
+        //     lastName: 'Ali',
+        //     father: {
+        //         firstName: 'Idris',
+        //         lastName: 'Miah',
+        //         fullName: function () {
+        //             console.log(this.firstName, this.lastName);
+        //         }
+        //     }
+        // }
+
+        // const { father: { fullName } } = person;
+        // console.log(fullName.call(person.father));
+
+
+        // const person = ['Showkat', 'Ali', 30];
+
+        // const [firstName, lastName, age] = person;
+        // console.log(firstName);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div id="demo4"></div>
+    <div id="demo5"></div>
+    <div id="demo6"></div>
+    <div id="demo7"></div>
+    <script>
+
+
+
+        let name = 'Concatenate ';
+        let age = 'Thirty';
+        let concat = name.concat('String ...');
+        document.getElementById('demo').innerHTML = concat;
+        document.getElementById('demo1').innerHTML = '<hr>';
+        //
+        let title = 'This is Upper Case';
+        let toUpperCase = title.toUpperCase();
+        document.getElementById('demo2').innerHTML = toUpperCase;
+        document.getElementById('demo3').innerHTML = '<hr>';
+        let text = "    Hello World!    ";
+        let length = text.length;
+        let result = text.replace(/^\s+|\s+$/gm, '');
+        let results = result.trim();
+
+
+        // let desc = 'Dolores dolor justo nonumy amet    sadipscing      no, dolore ea consetetur.';
+        // let len = desc.length;
+        // let result = desc.replace(/^\s+|\s+$/gm, '');
+        // let length = result.length;
+        // let trim = length.trim();
+        // //  let length = trim.length;
+        //  document.getElementById('demo4').innerHTML = len;
+        document.getElementById('demo6').innerHTML = length;
+        document.getElementById('demo7').innerHTML = length;
+        document.getElementById('demo5').innerHTML = '<hr>';
+
+
+    </script>
+</body>
+
+</html>

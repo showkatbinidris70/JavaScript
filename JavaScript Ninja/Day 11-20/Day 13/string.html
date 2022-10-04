@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String </title>
+</head>
+
+<body>
+    <script>
+        const str = 'Life, the universe and everything. Answer:';
+        console.log(`${str} ${str.length}`);
+
+        function getCharacterLength(str) {
+            // The string iterator that is used here iterates over characters,
+            //  not mere code units
+            return str.length;
+        }
+        console.log(getCharacterLength("Showkat")); // 3
+
+        const x = "Mozilla";
+        const empty = "";
+
+        console.log(`${x} is ${x.length} code units long`);
+        /* "Mozilla is 7 code units long" */
+
+        console.log(`The empty string has a length of ${empty.length}`);
+        // expected output: "The empty string has a length of 0"
+
+
+        const emoji = "😄";
+        console.log(emoji.length); // 2
+        const adlam = "𞤲𞥋𞤣𞤫";
+        console.log(adlam.length); // 8
+        const formula = "∀𝑥∈ℝ,𝑥²≥0";
+        console.log(formula.length); // 11
+
+        const name = "Showkat";
+        name.length = 5;
+        console.log(name);
+        console.log(name.length);
+
+        let x2 = new String("John");
+        let y2 = new String("John");
+        console.log(x2 == y2);
+        console.log(x2 === y2);
+
+        const myString = "Table of Contents";
+
+        document.body.innerHTML = myString.anchor("contents_anchor");
+
+        //charAt()
+        const anyString = 'Brave new world';
+        console.log(anyString.length);
+
+
+        const text = "Di niuna quali divenuti vita gli potendo avvien dalla nel.";
+        console.log(text.slice(3, 8));
+        console.log(text.slice(-4));
+        console.log(text.slice(-10, -4));
+        console.log(text.substring(3, 9));
+        console.log(text.substr(3, 5));
+        console.log(text.replace("niuna", "Showkat"));
+        console.log(text.replace(/Niuna/i, "Showkat"));
+        console.log(text.toLowerCase());
+        console.log(text.toUpperCase());
+        console.log(text.concat(" ", "Flaunting had sadness  tales passed."));
+        console.log(text.trim());
+        console.log(text.trimStart());
+        console.log(text.trimEnd());
+        console.log(text.split(""));
+
+        const num = "5";
+        console.log(num.padStart(4, "*"));
+        console.log(num.padEnd(4, "*"));
+        console.log(num.charAt(0));
+        console.log(num.charCodeAt(0));
+
+        //String search
+        console.log(text.indexOf("li"));
+        console.log(text.lastIndexOf("li"));
+        console.log(text.startsWith("Di"));
+        console.log(text.endsWith("nel."));
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

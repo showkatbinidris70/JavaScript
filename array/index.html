@@ -12,13 +12,18 @@
     <div id="demo"></div>
     <div id="dem1"></div>
     <script>
-
-        function multiPly(a, b) {
-            let sum = a + b;
-            return sum;
+        const fruits = ["Banana", "Orange", "Apple"];
+        let len = fruits.length;
+        let text = '<ul>';
+        // for (let i = 0; i < len; i++) {
+        //     text += '<li>' + fruits[i] + '</li>';
+        // }
+        fruits.forEach(myFunction);
+        text += '</ul>';
+        document.getElementById('demo').innerHTML = fruits.join('*');
+        function myFunction(value) {
+            text += '<li>' + value + '</li>';
         }
-        let result = multiPly(5, 6);
-        document.getElementById('demo').innerHTML = result;
     </script>
 </body>
 

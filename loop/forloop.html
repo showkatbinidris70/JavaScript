@@ -11,14 +11,30 @@
 <body>
     <div id="for-loop"></div>
     <script>
-        for (var i = 1; i <= 10; i++) {
-            const div = document.createElement('div');
-            div.innerHTML = '<b>' + i + '</b>';
-            document.getElementById("for-loop").appendChild(div);
-            console.log(i);
-        }
+        // for (var i = 1; i <= 10; i++) {
+        //     const div = document.createElement('div');
+        //     div.innerHTML = '<b>' + i + '</b>';
+        //     document.getElementById("for-loop").appendChild(div);
+        //     console.log(i);
+        // }
         //  document.getElementById("for-loop").innerHTML = '<h1>Hello World</h1>';
+        let arr = ['One', 'Two', 'Three', 'Four', 'Five'];
+        let section = ['A', 'B']
+        let student = ['Showkat', 'Momo'];
+        let text = '';
+        for (let i = 0; i <= arr.length - 1; i++) {
+            let num = text += "<span style='color:red;'>" + 'Class ' + arr[i] + "</span>" + '<br/>';
+            for (let j = 0; j <= section.length - 1; j++) {
+                let num = text += 'Section ' + section[j] + '<br/>';
+                for (let k = 0; k <= student.length - 1; k++) {
+                    let num = text += 'Student Name ' + student[k] + '<br/>';
+                    console.log(k);
+                    document.getElementById("for-loop").innerHTML = num;
+                }
 
+
+            }
+        }
 
     </script>
 </body>

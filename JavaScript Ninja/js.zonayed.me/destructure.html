@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const zonayed = ['Zonayed Ahmed', 21, 'Student'];
+        const [name, age, profession] = zonayed;
+        console.log(name);
+        console.log(age);
+        console.log(profession);
+    </script>
+    <script>
+        const zonayedObj = {
+            nameObj: 'Zonayed Ahmed',
+            ageObj: 21,
+            professionObj: 'Student'
+        };
+        const { nameObj, ageObj, professionObj } = zonayedObj;
+        console.log(nameObj);
+        console.log(ageObj);
+        console.log(professionObj);
+    </script>
+    <script>
+        var comObj = {
+            anotherObj: {
+                anotherNewObj: {
+                    title: 'JavaScript ES6'
+                }
+            }
+        };
+        const { anotherObj: { anotherNewObj: { title } } } = comObj;
+        console.log(title);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var objArr = {
+            normal: 'Normal Item',
+            name: ['Rahim', 'Karim', 'Rafiq', 'Shafiq'],
+            age: [10, 20, 30, 40, 50]
+        }
+
+        for (key in objArr) {
+            console.log(objArr[key]);
+        }
+
+        var arrObj = [
+            'Zonayed',
+            { name: 'Rafiq', age: 21, job: 'Student' },
+            'Bangladesh'
+        ]
+
+        for (key in arrObj) {
+            console.log(arrObj[key]);
+        }
+
+        const profile = {
+            firstName: "Showkat",
+            lastName: "Ali",
+            email: "showkat@gmail.com",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+
+        for (let key in profile) {
+            // console.log(key);
+            console.log(profile[key]);
+        }
+        console.log("=======================================");
+        const mail = 'email';
+        console.log(profile.firstName);
+        console.log(profile.fullName());
+        console.log(profile[mail]);
+
+    </script>
+</body>
+
+</html>

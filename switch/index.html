@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        // let month = prompt('Please enter current month name...');
+        // let months = ['January', 'February', 'March', 'April', 'May', "June", 'July', "August", 'September', 'October', 'November', 'December'];
+        // const result = months.findIndex(element => {
+        //     return element.toLowerCase() === month.toLowerCase();
+        // });
+
+        let date = new Date();
+        let month = prompt(date.getMonth());
+        console.log(month);
+
+
+        switch (month) {
+
+
+            case 0:
+                document.getElementById('demo').innerHTML = 'January';
+                break;
+            case 1:
+                document.getElementById('demo').innerHTML = '';
+                break;
+            case 2:
+                document.getElementById('demo').innerHTML = '';
+                break;
+            case 3:
+                document.getElementById('demo').innerHTML = '';
+                break;
+            case 4:
+                document.getElementById('demo').innerHTML = '';
+                break;
+            case 5:
+                document.getElementById('demo').innerHTML = 'June';
+                break;
+
+            case 6:
+                document.getElementById('demo').innerHTML = '';
+                break;
+            case 7:
+                document.getElementById('demo').innerHTML = '';
+                break;
+            default:
+                document.getElementById('demo').innerHTML = `This is not  month name`;
+
+
+            // case 0:
+            //     document.getElementById('demo').innerHTML = 'Sunday';
+            //     break;
+            // case 1:
+            //     document.getElementById('demo').innerHTML = 'Monday';
+            //     break;
+            // case 2:
+            //     document.getElementById('demo').innerHTML = 'Tuesday';
+            //     break;
+            // case 'Wednesday':
+            //     document.getElementById('demo').innerHTML = 'Wedensday';
+            //     break;
+            // case 4:
+            //     document.getElementById('demo').innerHTML = 'Thursday';
+            //     break;
+            // case 5:
+            //     document.getElementById('demo').innerHTML = 'Friday';
+            //     break;
+            // case 6:
+            //     document.getElementById('demo').innerHTML = 'Saturday';
+            //     break;
+            // default:
+            //     document.getElementById('demo').innerHTML = 'This is not day name';
+
+        }
+
+
+    </script>
+</body>
+
+</html>

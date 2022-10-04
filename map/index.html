@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map </title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        const map = new Map();
+        map.set("apples", 500);
+        map.set("bananas", 300);
+        map.set("oranges", 500);
+
+        document.getElementById('demo').innerHTML = map.get('bananas');
+    </script>
+</body>
+
+</html>
