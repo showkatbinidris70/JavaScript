@@ -1,0 +1,21 @@
+*{
+    margin: 0 auto;
+}
+div{
+   text-align: center; 
+   color: brown; 
+   background-color: azure;
+   width: 20%;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border-radius: 10px;
+}
+h2{
+    padding-top: 2px;
+    padding-bottom: 2px; 
+}
+h3{
+    display: inline-flex;
+    padding-top: 2px;
+    padding-bottom: 2px; 
+}

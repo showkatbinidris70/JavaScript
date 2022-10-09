@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Exercise-1:(2)
+        Write a function called valTimesIndex which accepts an array and returns a new array with each value 
+        multiplied by the index it is currently at in the array.
+
+        Examples:
+            valTimesIndex([1,2,3]) // [0,2,6]
+            valTimesIndex([1,-2,-3]) // [0,-2,-6]
+        */
+
+        function valTimesIndex(arr) {
+
+
+        }
+        console.log(valTimesIndex([1, 2, 3]));
+    </script>
+    <script>
+        /*
+        Exercise-2:(2)
+        Write a function called doubleOddNumbers which accepts an array and returns a new array with all 
+        of the odd numbers doubled (HINT - you can use map and filter to double and then filter the odd 
+        numbers).
+
+        Examples:
+            doubleOddNumbers([1,2,3,4,5]) // [2,6,10]
+            doubleOddNumbers([4,4,4,4,4]) // []
+        */
+        // const arr = [1, 2, 3, 4];
+        // arr.filter((item) => {
+        //     return item % 2 == 1;
+        // })
+        function doubleOddNumbers(arr) {
+
+            let oddNumber = arr.filter((item) => {
+                return item % 2 == 1;
+            })
+            let oddDouble = oddNumber.map(item => {
+                return item * 2;
+            })
+            console.log(oddDouble);
+
+        }
+        doubleOddNumbers([1, 2, 3, 4, 5]);
+        doubleOddNumbers([4, 4, 4, 4, 4]);
+    </script>
+    <script>
+        /*
+Exercise-3:(2)
+Write a function called showFirstAndLast which accepts an array of strings and returns a new array 
+with only the first and last character of each string.
+
+Examples:
+    showFirstAndLast(['obaydullah','Karim', 'miraz', 'kawsar', 'ruhi',     udemy']) // ["oh", "km", "mz", "kr", 'ri', 'uy']
+    showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
+
+*/
+        function showFirstAndLast(arr) {
+            //write code here
+        }
+    </script>
+</body>
+
+</html>

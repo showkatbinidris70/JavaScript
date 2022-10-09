@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const friends = [
+            {
+                name: "Showkat",
+                books: ["Bible", "Harry Potter"],
+                age: 30
+            },
+            {
+                name: "Mohammad",
+                books: ["Cachi", "Harry"],
+                age: 30
+            },
+            {
+                name: "Sabbir",
+                books: ["Tripitak", "Potter"],
+                age: 30
+            }
+        ]
+
+        const allBooks = friends.reduce((acc, curr) => {
+            const allOfBooks = [...acc, ...curr.books];
+            return allOfBooks;
+        }, [])
+        console.log(allBooks);
+
+
+        const names = ["Showkat", "Mohammad", "Showkat", "Momo"];
+
+        const countName = names.reduce((allNames, name) => {
+            if (name in allNames) {
+                allNames[name] = allNames[name] + 1;
+            } else {
+                allNames[name] = 1
+            }
+            return allNames;
+
+        }, {});
+        console.log(countName);
+
+    </script>
+
+</body>
+
+</html>
