@@ -1,6 +1,0 @@
-Quakka js -> for inline output
-quakka js -> view-> commonad pallet->quakka js-> start on current file
-
-
-prettier -> for code formatter 
-prettier -> codeformatter-> open setting ui->
